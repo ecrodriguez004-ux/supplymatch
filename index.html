@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- METADATOS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Supply Match">
+  <meta name="description" content="Supply Match conecta empresas, emprendedores y PyMEs con proveedores de productos y servicios.">
+  <meta name="keywords" content="Supply Match, proveedores, empresas, PyMEs, emprendedores, membresías">
+  <title>Supply Match | Encuentra proveedores</title>
+
+  <!-- ESTILOS Y FUENTES -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- ICONOS Y JAVASCRIPT -->
+  <script defer src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script defer src="Js/script.js"></script>
+</head>
+
+<body class="body5r">
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <img src="img/logo.png" alt="Logo de Supply Match">
+        <span>Supply Match</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Proveedores</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Soy proveedor</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="btn primary nav-contact" onclick="openWhatsApp('Hola, quiero conocer más sobre Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Contactar
+        </button>
+      </nav>
+
+      <button id="menu-toggle" type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        ☰
+      </button>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Navegación móvil" hidden>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Proveedores</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#oferta">Soy proveedor</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero conocer más sobre Supply Match.')">
+        <i data-lucide="message-circle" aria-hidden="true"></i>
+        Contactar
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= INICIO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Conecta • Compara • Encuentra</p>
+          <h1>Supply<br>Match</h1>
+          <p class="lead">
+            Una plataforma creada para conectar emprendedores con proveedores confiables,
+            facilitando la búsqueda de productos y servicios para sus negocios.
+          </p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Buscar proveedores</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi la página de Supply Match y quiero conocer cómo funciona.')">
+              Conocer más
+            </button>
+          </div>
+          <p class="trust">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            Conexiones más seguras y confiables
+          </p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/logo.png" alt="Supply Match">
+          <span class="tag tag-love">Soluciones para tu negocio</span>
+          <span class="tag tag-custom">Empresas • Emprendedores • PyMEs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROVEEDORES ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Proveedores</p>
+          <h2>Encuentra opciones para tu negocio</h2>
+          <p class="lead">Explora diferentes categorías y consulta los detalles de cada proveedor.</p>
+          <p class="section-note">
+            Catálogo de demostración. Los perfiles y sus condiciones están pendientes de validación.
+          </p>
+        </div>
+        <div class="product-grid">
+
+          <!-- PROVEEDOR 1 -->
+          <article class="product-card reveal">
+            <img src="img/img1.jpg" alt="Productos de Pack Solutions" loading="lazy">
+            <div class="product-body">
+              <span class="tag">Empaques</span>
+              <h3>Pack Solutions</h3>
+              <p class="price">Ciudad de México</p>
+              <p class="description">
+                Cajas y empaques para presentar y proteger tus productos.
+                Pedido mínimo de referencia: 50 piezas.
+              </p>
+              <button type="button" class="btn card" aria-haspopup="dialog" onclick="openModal('modal-caja')">
+                Ver proveedor
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- PROVEEDOR 2 -->
+          <article class="product-card reveal">
+            <img src="img/img2.jpg" alt="Productos del proveedor de textiles" loading="lazy">
+            <div class="product-body">
+              <span class="tag">Textiles</span>
+              <h3>Proveedor de textiles</h3>
+              <p class="price">Ubicación por confirmar</p>
+              <p class="description">
+                Opciones de telas y materiales para desarrollar los productos de tu negocio.
+              </p>
+              <button type="button" class="btn card" aria-haspopup="dialog" onclick="openModal('modal-vela')">
+                Ver proveedor
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- PROVEEDOR 3 -->
+          <article class="product-card reveal">
+            <img src="img/img3.jpg" alt="Productos del proveedor de insumos" loading="lazy">
+            <div class="product-body">
+              <span class="tag">Insumos</span>
+              <h3>Proveedor de insumos</h3>
+              <p class="price">Ubicación por confirmar</p>
+              <p class="description">
+                Materiales e insumos para acompañar las operaciones de tu empresa.
+              </p>
+              <button type="button" class="btn card" aria-haspopup="dialog" onclick="openModal('modal-taza')">
+                Ver proveedor
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- PROVEEDOR 4 -->
+          <article class="product-card reveal">
+            <img src="img/img4.jpg" alt="Productos del proveedor de artículos" loading="lazy">
+            <div class="product-body">
+              <span class="tag">Artículos</span>
+              <h3>Proveedor de artículos</h3>
+              <p class="price">Ubicación por confirmar</p>
+              <p class="description">
+                Artículos y opciones de personalización para diferentes necesidades empresariales.
+              </p>
+              <button type="button" class="btn card" aria-haspopup="dialog" onclick="openModal('modal-jardin')">
+                Ver proveedor
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- PROVEEDOR 5 -->
+          <article class="product-card reveal">
+            <img src="img/img5.jpg" alt="Productos del proveedor de alimentos" loading="lazy">
+            <div class="product-body">
+              <span class="tag">Alimentos</span>
+              <h3>Proveedor de alimentos</h3>
+              <p class="price">Ubicación por confirmar</p>
+              <p class="description">
+                Consulta productos y condiciones de abastecimiento para tu negocio.
+              </p>
+              <button type="button" class="btn card" aria-haspopup="dialog" onclick="openModal('modal-kit')">
+                Ver proveedor
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- PROVEEDOR 6 -->
+          <article class="product-card reveal">
+            <img src="img/img6.jpg" alt="Imagen del proveedor de servicios" loading="lazy">
+            <div class="product-body">
+              <span class="tag">Servicios</span>
+              <h3>Proveedor de servicios</h3>
+              <p class="price">Ubicación por confirmar</p>
+              <p class="description">
+                Servicios que pueden apoyar la operación y el crecimiento de tu empresa.
+              </p>
+              <button type="button" class="btn card" aria-haspopup="dialog" onclick="openModal('modal-tarjeta')">
+                Ver proveedor
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">¿Por qué Supply Match?</p>
+          <h2>Una plataforma pensada para conectar</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="search" aria-hidden="true"></i></div>
+            <h3>Descubre proveedores</h3>
+            <p>Explora categorías de productos y servicios de acuerdo con las necesidades de tu negocio.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="message-circle" aria-hidden="true"></i></div>
+            <h3>Contacto directo</h3>
+            <p>Solicita información sobre disponibilidad, pedidos mínimos y condiciones.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="bar-chart-3" aria-hidden="true"></i></div>
+            <h3>Información para decidir</h3>
+            <p>Conoce nuestros planes con reportes de mercado y herramientas de análisis.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="users" aria-hidden="true"></i></div>
+            <h3>Conexión empresarial</h3>
+            <p>Un espacio para acercar empresas, emprendedores, PyMEs y proveedores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OFERTA Y MEMBRESÍAS ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Crece con Supply Match</span>
+          <h2>Conecta tu negocio con nuevas oportunidades</h2>
+          <p>Conoce nuestras membresías y consulta cómo participar como empresa o proveedor.</p>
+          <button id="offer-button" type="button" class="btn butter" aria-expanded="false" aria-controls="offer-reveal" onclick="revealOffer()">
+            Conocer membresías
+          </button>
+          <div id="offer-reveal" class="offer-reveal hidden">
+            <p class="offer-reveal-title">Elige la opción que mejor se adapte a tu negocio.</p>
+            <div class="membership-grid">
+
+              <!-- FREEMIUM -->
+              <article class="membership-card">
+                <span class="tag">Para comenzar</span>
+                <h3>Freemium</h3>
+                <p class="membership-price">Gratis</p>
+                <p>Una opción para comenzar a conocer Supply Match y encontrar proveedores.</p>
+                <button type="button" class="btn outline" onclick="openWhatsApp('Hola, quiero conocer la membresía Freemium de Supply Match.')">
+                  Consultar plan
+                </button>
+              </article>
+
+              <!-- PLAN PYME -->
+              <article class="membership-card">
+                <span class="tag">Más funciones</span>
+                <h3>Plan PyME</h3>
+                <p class="membership-price">$399 MXN/mes</p>
+                <p>Incluye Freemium, reportes de mercado y funciones avanzadas para tu negocio.</p>
+                <button type="button" class="btn outline" onclick="openWhatsApp('Hola, quiero conocer el Plan PyME de Supply Match.')">
+                  Consultar plan
+                </button>
+              </article>
+
+              <!-- PLAN EMPRESARIAL -->
+              <article class="membership-card">
+                <span class="tag">Completo</span>
+                <h3>Plan Empresarial</h3>
+                <p class="membership-price">$999 MXN/mes</p>
+                <p>Incluye el Plan PyME, soporte técnico prioritario y herramientas de análisis.</p>
+                <button type="button" class="btn outline" onclick="openWhatsApp('Hola, quiero conocer el Plan Empresarial de Supply Match.')">
+                  Consultar plan
+                </button>
+              </article>
+
+            </div>
+            <p class="commission-note">
+              El modelo contempla una comisión del 3% al 5% por operación cerrada dentro de la plataforma.
+            </p>
+            <div class="offer-code-row">
+              <span class="offer-code">SUPPLYMATCH</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar nombre</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, soy proveedor y quiero conocer cómo formar parte de Supply Match.')">
+                Soy proveedor
+              </button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCIAS / CARRUSEL ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experiencia Supply Match</p>
+          <h2>Así puede ayudarte</h2>
+          <p class="section-note">Casos ilustrativos de uso; no son opiniones de clientes reales.</p>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+
+            <!-- EXPERIENCIA 1 -->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="avatar" aria-hidden="true"><i data-lucide="store"></i></div>
+                  <div>
+                    <p class="name">Emprendedores</p>
+                    <p class="occasion">Primeras conexiones</p>
+                  </div>
+                </div>
+                <p class="quote">
+                  Un emprendimiento puede explorar opciones de empaque y consultar pedidos mínimos antes de elegir un proveedor.
+                </p>
+                <div class="stars">Caso ilustrativo</div>
+              </div>
+            </article>
+
+            <!-- EXPERIENCIA 2 -->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="avatar" aria-hidden="true"><i data-lucide="briefcase"></i></div>
+                  <div>
+                    <p class="name">Empresas y PyMEs</p>
+                    <p class="occasion">Opciones para crecer</p>
+                  </div>
+                </div>
+                <p class="quote">
+                  Una empresa puede consultar alternativas de insumos y solicitar información para comparar condiciones.
+                </p>
+                <div class="stars">Caso ilustrativo</div>
+              </div>
+            </article>
+
+            <!-- EXPERIENCIA 3 -->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="avatar" aria-hidden="true"><i data-lucide="package"></i></div>
+                  <div>
+                    <p class="name">Proveedores</p>
+                    <p class="occasion">Nuevas oportunidades</p>
+                  </div>
+                </div>
+                <p class="quote">
+                  Un proveedor puede solicitar información para presentar su oferta a negocios que buscan productos y servicios.
+                </p>
+                <div class="stars">Caso ilustrativo</div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Experiencia anterior">←</button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar experiencia">
+            <button type="button" class="active" aria-label="Ver experiencia 1" aria-current="true"></button>
+            <button type="button" aria-label="Ver experiencia 2" aria-current="false"></button>
+            <button type="button" aria-label="Ver experiencia 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente experiencia">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO Y REDES ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Estamos para ayudarte</p>
+          <h2>Hablemos de tu negocio</h2>
+          <p class="lead">
+            Cuéntanos qué productos o servicios necesitas y conoce cómo Supply Match puede ayudarte a conectar.
+          </p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero información sobre Supply Match para mi negocio.')">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+            Escribir por WhatsApp
+          </button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li>
+              <i data-lucide="instagram" aria-hidden="true"></i>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <i data-lucide="facebook" aria-hidden="true"></i>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <i data-lucide="mail" aria-hidden="true"></i>
+              <a href="mailto:ec.rodriguez004@ebc.edu.mx">
+                ec.rodriguez004@ebc.edu.mx
+              </a>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Supply Match</p>
+      <p class="love">Conecta • Compara • Encuentra</p>
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="#productos">Proveedores</a>
+        <a href="#oferta">Membresías</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ================= WHATSAPP FLOTANTE ================= -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los servicios de Supply Match.')">
+    <i data-lucide="message-circle" aria-hidden="true"></i>
+  </button>
+
+  <!-- ================= MODAL 1 ================= -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-image">
+        <img src="img/img1.jpg" alt="Productos de Pack Solutions">
+        <button type="button" class="modal-close" aria-label="Cerrar proveedor" onclick="closeModal('modal-caja')">×</button>
+      </div>
+      <div class="modal-body">
+        <span class="tag">Proveedor de ejemplo</span>
+        <h2 id="modal-caja-title">Pack Solutions</h2>
+        <p class="price">Empaques para tu negocio</p>
+        <p>Comunícate con Supply Match para conocer disponibilidad, opciones y condiciones.</p>
+        <h3>Información del proveedor</h3>
+        <ul class="provider-details">
+          <li><i data-lucide="tag" aria-hidden="true"></i>Empaques</li>
+          <li><i data-lucide="map-pin" aria-hidden="true"></i>Ciudad de México</li>
+          <li><i data-lucide="package" aria-hidden="true"></i><span>Pedido mínimo: <strong>50 piezas</strong></span></li>
+        </ul>
+        <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero información sobre Pack Solutions y sus empaques en Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar información
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 2 ================= -->
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-image">
+        <img src="img/img2.jpg" alt="Productos del proveedor de textiles">
+        <button type="button" class="modal-close" aria-label="Cerrar proveedor" onclick="closeModal('modal-vela')">×</button>
+      </div>
+      <div class="modal-body">
+        <span class="tag">Proveedor de ejemplo</span>
+        <h2 id="modal-vela-title">Proveedor de textiles</h2>
+        <p class="price">Materiales para tus productos</p>
+        <p>Consulta telas, materiales y condiciones de compra a través de Supply Match.</p>
+        <h3>Información del proveedor</h3>
+        <ul class="provider-details">
+          <li><i data-lucide="tag" aria-hidden="true"></i>Textiles</li>
+          <li><i data-lucide="map-pin" aria-hidden="true"></i>Ubicación por confirmar</li>
+          <li><i data-lucide="package" aria-hidden="true"></i><span>Pedido mínimo: <strong>Por confirmar</strong></span></li>
+        </ul>
+        <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero información sobre el proveedor de textiles de Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar información
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 3 ================= -->
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-image">
+        <img src="img/img3.jpg" alt="Productos del proveedor de insumos">
+        <button type="button" class="modal-close" aria-label="Cerrar proveedor" onclick="closeModal('modal-taza')">×</button>
+      </div>
+      <div class="modal-body">
+        <span class="tag">Proveedor de ejemplo</span>
+        <h2 id="modal-taza-title">Proveedor de insumos</h2>
+        <p class="price">Opciones para tu operación</p>
+        <p>Consulta materiales e insumos de acuerdo con las necesidades de tu empresa.</p>
+        <h3>Información del proveedor</h3>
+        <ul class="provider-details">
+          <li><i data-lucide="tag" aria-hidden="true"></i>Insumos</li>
+          <li><i data-lucide="map-pin" aria-hidden="true"></i>Ubicación por confirmar</li>
+          <li><i data-lucide="package" aria-hidden="true"></i><span>Pedido mínimo: <strong>Por confirmar</strong></span></li>
+        </ul>
+        <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero información sobre el proveedor de insumos de Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar información
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 4 ================= -->
+  <div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-image">
+        <img src="img/img4.jpg" alt="Productos del proveedor de artículos">
+        <button type="button" class="modal-close" aria-label="Cerrar proveedor" onclick="closeModal('modal-jardin')">×</button>
+      </div>
+      <div class="modal-body">
+        <span class="tag">Proveedor de ejemplo</span>
+        <h2 id="modal-jardin-title">Proveedor de artículos</h2>
+        <p class="price">Artículos para tu empresa</p>
+        <p>Consulta productos y opciones de personalización para tu negocio.</p>
+        <h3>Información del proveedor</h3>
+        <ul class="provider-details">
+          <li><i data-lucide="tag" aria-hidden="true"></i>Artículos</li>
+          <li><i data-lucide="map-pin" aria-hidden="true"></i>Ubicación por confirmar</li>
+          <li><i data-lucide="package" aria-hidden="true"></i><span>Pedido mínimo: <strong>Por confirmar</strong></span></li>
+        </ul>
+        <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero información sobre el proveedor de artículos de Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar información
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 5 ================= -->
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-image">
+        <img src="img/img5.jpg" alt="Productos del proveedor de alimentos">
+        <button type="button" class="modal-close" aria-label="Cerrar proveedor" onclick="closeModal('modal-kit')">×</button>
+      </div>
+      <div class="modal-body">
+        <span class="tag">Proveedor de ejemplo</span>
+        <h2 id="modal-kit-title">Proveedor de alimentos</h2>
+        <p class="price">Abastecimiento para tu negocio</p>
+        <p>Consulta productos, disponibilidad y condiciones de compra con Supply Match.</p>
+        <h3>Información del proveedor</h3>
+        <ul class="provider-details">
+          <li><i data-lucide="tag" aria-hidden="true"></i>Alimentos</li>
+          <li><i data-lucide="map-pin" aria-hidden="true"></i>Ubicación por confirmar</li>
+          <li><i data-lucide="package" aria-hidden="true"></i><span>Pedido mínimo: <strong>Por confirmar</strong></span></li>
+        </ul>
+        <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero información sobre el proveedor de alimentos de Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar información
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 6 ================= -->
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-image">
+        <img src="img/img6.jpg" alt="Imagen del proveedor de servicios">
+        <button type="button" class="modal-close" aria-label="Cerrar proveedor" onclick="closeModal('modal-tarjeta')">×</button>
+      </div>
+      <div class="modal-body">
+        <span class="tag">Proveedor de ejemplo</span>
+        <h2 id="modal-tarjeta-title">Proveedor de servicios</h2>
+        <p class="price">Apoyo para tu empresa</p>
+        <p>Conoce servicios que pueden acompañar la operación y el crecimiento de tu negocio.</p>
+        <h3>Información del proveedor</h3>
+        <ul class="provider-details">
+          <li><i data-lucide="tag" aria-hidden="true"></i>Servicios</li>
+          <li><i data-lucide="map-pin" aria-hidden="true"></i>Ubicación por confirmar</li>
+          <li><i data-lucide="package" aria-hidden="true"></i><span>Contratación mínima: <strong>Por confirmar</strong></span></li>
+        </ul>
+        <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero información sobre el proveedor de servicios de Supply Match.')">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Solicitar información
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= AVISOS ================= -->
+  <p id="site-message" class="site-message" role="status" hidden></p>
+
+</body>
+</html>
